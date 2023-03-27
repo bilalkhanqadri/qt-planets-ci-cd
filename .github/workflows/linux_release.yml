@@ -24,7 +24,7 @@ env:
 
 jobs:
   build:
-    runs-on:  ubuntu-18.04
+    runs-on:  ubuntu-22.04
 
     steps:
       - name: Checkout repo
@@ -37,8 +37,8 @@ jobs:
         with:
           version:      ${{ env.QT_VERSION }}
           host:         linux
-          target:       desktop
-          arch:         gcc_64
+          target:       android
+          arch:         android
           dir:          ${{ runner.temp }}
           modules:      qtcharts qt3d
           setup-python: false
